@@ -10,6 +10,7 @@ import { UserDetailsPage } from '../pages/user-details/user-details';
 
 // PROVIDERS
 import { GithubUsers } from '../providers/github-users';
+import { GithubRepos } from '../providers/github-repos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     GithubUsers,
+    GithubRepos,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
