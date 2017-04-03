@@ -19,7 +19,15 @@ export class ReposPage {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('Hello Repos Page');
+  search(searchEvent) {
+    let term = searchEvent.target.value;
+
+    if(term.trim() === '' || term.trim() < 3) {
+      this.repos = this.originalRepos;
+    } else {
+      this.githubRepos.searchRepositories(term).subscribe(users => {
+        this.repos = users
+      })
+    }
   }
 }
