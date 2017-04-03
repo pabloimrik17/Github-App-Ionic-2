@@ -16,6 +16,7 @@ export class ReposPage {
     githubRepos.load().subscribe(repos => {
       this.repos = repos;
       this.originalRepos = repos;
+      console.log(repos);
     })
   }
 
